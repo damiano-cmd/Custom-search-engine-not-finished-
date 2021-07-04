@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    z-index: 0;
+}
+
+#svg {
+    width: clamp(35px, 5vh, 50px);
+    height: clamp(35px, 5vh, 50px);
+}
+
+.nav {
+    width: 85%;
+    padding: 0% 10% 0% 5%;
+    height: clamp(60px, 9vh, 90px);
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-search {
+    height: clamp(40px, 8vh, 120px);
+    padding: 5px;
+    background-color: rgba(8, 8, 8, 0.541);
+    border-radius: clamp(50px, 8vh, 120px);
+}
+
+.main-search button {
+    float: right;
+    border: 0px;
+    border-radius: 50%;
+    width: clamp(40px, 8vh, 120px);
+    height: clamp(40px, 8vh, 120px);
+    background: none;
+    transition: 0.2s;
+}
+
+.main-search input {
+    width: 0;
+    margin-left: 0;
+    float: left;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    line-height: clamp(40px, 8vh, 120px);
+    transition: 0.5s;
+}
+
+.main-search:hover > #si {
+    width: clamp(380px, 35vw, 1000px);
+    margin-left: 10px;
+}
+
+.main-search:hover > #sb {
+    background: white;
+}
+
+.main-search:hover > #sm {
+    fill: rgb(255, 255, 255);
+}
+
+.off-search {
+    height: clamp(40px, 6vh, 80px);
+    width: 60%;
+    padding: 5px;
+    background-color: rgba(8, 8, 8, 0.541);
+    border-radius: clamp(30px, 6vh, 120px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.off-search button {
+    cursor: pointer;
+    border: 0px;
+    border-radius: 50%;
+    width: clamp(50px, 6vh, 120px);
+    height: clamp(50px, 6vh, 120px);
+    background: none;
+    transition: 0.1s;
+}
+
+.off-search input {
+    border: none;
+    width: 90%;
+    background: none;
+    margin-left: 10px;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    line-height: clamp(40px, 6vh, 120px);
+    transition: 0.5s;
+}
+
+.off-search button:hover {
+    background-color: white;
+}
+
+.search-main {
+    width: 100%;
+    min-height: 91vh;
+    padding-top: clamp(60px, 9vh, 90px);
+}
+
+.article {
+    position: relative;
+    width: clamp(350px, 30%, 500px);
+    padding: 20px 0 25px clamp(20px, 10%, 100px);
+    font-family: fantasy;
+    font-size: 16px;
+}
+
+.article h2 {
+    padding-bottom: 7px;
+}
+
+.article a {
+    text-decoration: none;
+}
+
+.article a #link {
+    color: #007542;
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav {
+        padding: 0px;
+        width: 100%;
+        justify-content: center;
+    }
+    .off-search {
+        width: clamp(100px, 85%, 800px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .off-search {
+        width: 95%;
+    }
+}
